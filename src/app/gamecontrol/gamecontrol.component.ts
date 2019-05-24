@@ -6,18 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gamecontrol.component.css']
 })
 export class GamecontrolComponent implements OnInit {
-  number = [{int:0}];
+  number = 0;
   constructor() { }
 
   ngOnInit() {
 
   }
 
-  onStart(start: {int:0}){
-    setInterval()
+  onStart(){
+    setInterval(() => {
+      this.number++
+    }, 1000);
   }
 
   onStop(){
-
+    this.number=0;
   }
 }
