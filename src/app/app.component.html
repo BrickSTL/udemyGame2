@@ -1,6 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <app-gamecontrol></app-gamecontrol>
+  <app-gamecontrol (numberFired)="onNumberFired($event)"></app-gamecontrol>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col" style="text-align:center">
+      <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+    </div>
+    <div class="col" style="text-align:center">
+      <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
+    </div>
+  </div>
+</div>
+
 
 <router-outlet></router-outlet>
